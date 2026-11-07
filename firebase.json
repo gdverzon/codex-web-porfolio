@@ -1,0 +1,14 @@
+{
+  "hosting": {
+    "public": "dist",
+    "predeploy": ["node scripts/prepare-hosting.js"],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md",
+      "firebase-debug.log*",
+      "**/*.log"
+    ]
+  }
+}

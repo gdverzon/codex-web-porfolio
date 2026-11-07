@@ -39,6 +39,22 @@ Keep internal asset URLs relative (`css/style.css`, not `/css/style.css`) so Git
 
 No custom workflow or build command is needed. GitHub account/plan and repository visibility can affect Pages availability. This project does not publish automatically to any hosting provider.
 
+## Firebase Hosting deployment
+
+This project includes `firebase.json` for static Hosting from `dist/`. A predeploy command runs `node scripts/prepare-hosting.js` to copy an explicit allowlist of seven website files into that generated folder. Git metadata, documentation, configuration, and logs are never copied. Node.js is needed for this preparation step; no dependencies, Firebase SDK, backend, or SPA rewrite are needed. Add future public assets to the script's allowlist.
+
+With Firebase CLI installed, run these commands from this folder. On Windows use `firebase.cmd` if PowerShell blocks the `firebase.ps1` launcher; no execution-policy change is needed.
+
+```powershell
+firebase.cmd login
+firebase.cmd projects:list
+firebase.cmd deploy --only hosting --project YOUR_FIREBASE_PROJECT_ID
+```
+
+Replace `YOUR_FIREBASE_PROJECT_ID` with the actual ID from your Firebase console or project list. If you have no project yet, create one at https://console.firebase.google.com/ first. The deploy command prints the live Hosting URL. Repeat it after edits to publish updates. It deploys only Hosting and does not configure databases or functions.
+
+Update the Open Graph URLs using the confirmed live URL after deployment. See the [Firebase Hosting quickstart](https://firebase.google.com/docs/hosting/quickstart) for more information.
+
 ## Accessibility and review
 
 The site includes semantic landmarks, heading hierarchy, a skip link, visible keyboard focus, image descriptions, and a labeled mobile navigation toggle. The menu closes on selection, Escape, outside clicks, and breakpoint changes. Selecting a mobile menu link moves focus to its section; Escape returns focus to the toggle.
