@@ -1,0 +1,20 @@
+GERARD DEXTER VERZON — RESUME PLACEHOLDER
+
+This is an editable template, not a completed resume.
+
+AWS Certified Cloud Practitioner | Aspiring Cloud & DevOps Engineer
+Education: BS Information Technology
+Background: 7 years of professional experience including telecommunications engineering and project management.
+Focus: Cloud Engineering, DevOps, and Workflow Automation.
+
+Credentials:
+- AWS Certified Cloud Practitioner
+- AWS re/Start training
+
+Experience — add accurate employers, dates, responsibilities, and achievements:
+- Wireline Engineer
+- Commissioning Engineer
+- PMO Analyst
+
+Add verified skills, completed projects, and real contact details before distribution.
+Replace this file with a finished PDF and update the download link in index.html.
